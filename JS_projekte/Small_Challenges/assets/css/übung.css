@@ -1,0 +1,38 @@
+#firstRow {
+    width: 100%;
+    height: 30vh;
+    background-color: rgba(0, 68, 42, 0.39);
+    text-align: center;
+    padding-top: 60px;
+}
+
+#display-btn {
+    padding-top: 60px;
+    color: rgba(27, 29, 29, 0.897);
+}
+
+#secondRow {
+    height: 100vh;
+    text-align: center;
+    padding-top: 200px;
+    text-align: center;
+}
+
+#R {
+    display: inline-block;
+}
+
+#text-inpt {
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 500px;
+    padding-left: 15px;
+}
+
+#Btn-send {
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(155, 236, 155, 0.76);
+    height: 30px;
+}

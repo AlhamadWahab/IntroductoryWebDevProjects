@@ -1,0 +1,103 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/nahaufnahme-des-konzeptes-der-gesunden-diaet-und-des-gewichtsverlustes_53876-47177.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    /* Textfarbe */
+}
+
+#rechnen {
+    margin: 50px 20px 25px;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, .2);
+    padding: 10px;
+    width: 90%;
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.mainContainer {
+    border-radius: 40px;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    /* Hintergrundfarbe mit Transparenz */
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-position: center;
+    border-radius: 40px;
+}
+
+.wrapper {
+    text-align: center;
+    width: 420px;
+    background: rgba(0, 0, 0, 0.281);
+    /* Hintergrundfarbe mit Transparenz */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+}
+
+.wrapper h1,
+h3 {
+    text-align: center;
+    color: #ffffff;
+    /* Überschriftenfarbe */
+}
+
+.wrapper h5,
+h6 {
+    text-align: center;
+    font-size: medium;
+    color: #ffffff;
+    /* Farbe für kleinere Überschriften */
+}
+
+#gewicht,
+#größe {
+    border-radius: 40px;
+    width: 80%;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    font-size: 17px;
+    color: #ffffff;
+    /* Farbe für Eingabefelder */
+}
+
+#gewicht::placeholder,
+#größe::placeholder {
+    color: #ffffff;
+    /* Platzhalterfarbe */
+}
+
+@media(max-width:420px) {
+    .wrapper {
+        width: 320px;
+    }
+}

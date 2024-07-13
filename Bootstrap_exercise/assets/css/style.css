@@ -1,0 +1,17 @@
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+.carousel-item .d-block{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 20%;
+}
+body{
+  background-color: rgba(117, 115, 115, 0.342);
+}
+
+.card-body{
+  box-shadow: 10px 10px 30px rgba(44, 42, 42, 0.342);;
+}

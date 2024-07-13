@@ -1,0 +1,286 @@
+// /* ANOTHER SOLVE WITH FETCH: */
+
+// const userUrl = 'https://jsonplaceholder.typicode.com/users/';
+// const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+
+// document.getElementById('sideContainer').innerHTML = '';
+// document.querySelector('.contentContainer').innerHTML = '';
+
+
+// getAllUser();
+
+// // Function to handle user click event:
+// function userClicked(userId, el) {
+//     displayPosts(userId)
+//     let selectedElements = document.getElementsByClassName('selected')
+//     for (element of selectedElements) {
+//         element.classList.remove('selected')
+//     }
+//     el.classList.add('selected')
+// }
+
+
+// // Function to fetch all users and render them as buttons
+// function getAllUser() {
+//     fetch(userUrl)
+//         .then((response) => {
+//             if (!response.ok) {
+//                 throw new Error('Error loading users data.');
+//             }
+//             return response.json(); // Parse response JSON
+//         })
+//         .then((users) => {
+//             for (let user of users) {
+//                 document.getElementById('sideContainer').innerHTML +=
+//                     `
+//                     <div onclick="userClicked(${user.id}, this)" class="userNameEmail" id="user-btn">
+//                         <h3 id="username">${user.name}</h3>
+//                         <p id="uEmail">${user.email}</p>
+//                     </div><br><br>
+//                 `;
+//             }
+//         })
+//         .catch((error) => {
+//             document.getElementById('sideContainer').innerHTML = error.message; // Display error message
+//         });
+// }
+// // Function to fetch all user Posts and reder them:
+// function displayPosts(userId) {
+
+//     fetch(postsUrl + `?userId=${userId}`)
+//         .then((response) => {
+//             if (!response.ok) {
+//                 throw new Error('Error loading user posts')
+//             }
+//             return response.json()
+//         })
+//         .then((posts) => {
+//             document.querySelector('.contentContainer').innerHTML = ''; // Clear previous posts
+//             for (let post of posts) {
+//                 document.querySelector('.contentContainer').innerHTML +=
+//                     `
+//             <div class="userPosts">
+//                 <h5 id="userTitelPost">${post.title}</h5>
+//                 <hr />
+//                 <p id="uContent">
+//                 ${post.body}
+//                 </p>
+//             </div><br><br>
+//         `;
+//             }
+//         })
+// }
+////// OR:
+
+// getAllUser()
+//     .then(() => {
+//         displayPosts(4)
+//     })
+
+// // Function to handle user click event:
+// function userClicked(userId, el) {
+//     displayPosts(userId)
+//     let selectedElements = document.getElementsByClassName('selected')
+//     for (element of selectedElements) {
+//         element.classList.remove('selected')
+//     }
+//     el.classList.add('selected')
+// }
+
+
+// // Function to fetch all users and render them as buttons
+// function getAllUser() {
+//     return new Promise((resolve, reject) => {
+//         fetch(userUrl)
+//             .then((response) => {
+//                 if (!response.ok) {
+//                     throw new Error('Error loading users data.');
+//                 }
+//                 return response.json(); // Parse response JSON
+//             })
+//             .then((users) => {
+//                 for (let user of users) {
+//                     document.getElementById('sideContainer').innerHTML +=
+//                         `
+//                     <div onclick="userClicked(${user.id}, this)" class="userNameEmail" id="user-btn">
+//                         <h3 id="username">${user.name}</h3>
+//                         <p id="uEmail">${user.email}</p>
+//                     </div><br><br>
+//                 `;
+//                 }
+//                 resolve()
+//             })
+//             .catch((error) => {
+//                 reject(error)  // Display error message
+//             });
+//     })
+// }
+
+// function displayPosts(userId) {
+
+//     fetch(postsUrl + `?userId=${userId}`)
+//         .then((response) => {
+//             if (!response.ok) {
+//                 throw new Error('Error loading user posts')
+//             }
+//             return response.json()
+//         })
+//         .then((posts) => {
+//             document.querySelector('.contentContainer').innerHTML = ''; // Clear previous posts
+//             for (let post of posts) {
+//                 document.querySelector('.contentContainer').innerHTML +=
+//                     `
+//             <div class="userPosts">
+//                 <h5 id="userTitelPost">${post.title}</h5>
+//                 <hr />
+//                 <p id="uContent">
+//                 ${post.body}
+//                 </p>
+//             </div><br><br>
+//         `;
+//             }
+//         })
+// }
+/* ============================================================================================ */
+
+
+// let userArray = [];
+// let userPosts = [];
+// const userUrl = 'https://jsonplaceholder.typicode.com/users/';
+// const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
+// const httpReq = new XMLHttpRequest();
+// let previousButtonId = 0;
+
+// document.getElementById('sideContainer').innerHTML = '';
+// document.querySelector('.contentContainer').innerHTML = '';
+
+// // Function to fetch all users and render them as buttons
+// function getAllUserAndPosts() {
+//     renderUser('GET', userUrl)
+//     httpReq.onload = function () {
+//         userArray = httpReq.response;
+//         if (httpReq.status >= 200 && httpReq.status < 300) {
+//             for (let user of userArray) {
+//                 document.getElementById('sideContainer').innerHTML +=
+//                     `
+//                         <div onclick="displayUserPosts(${user.id})" class="userNameEmail" id="user-btn-${user.id}">
+//                             <h3 id="username">${user.name}</h3>
+//                             <p id="uEmail">${user.email}</p>
+//                         </div><br><br>
+//                     `;
+//             }
+//         }
+//         else {
+//             document.getElementById('sideContainer').innerHTML = 'Error loading user data.';
+//         }
+//         document.querySelector('.contentContainer').innerHTML = `<h2 style="display: flex; justify-content: center; align-items: center; height: 100%;">Click on any user to see his posts</h2>`
+//     };
+// }
+// // Function to display posts of a specific user
+// function displayUserPosts(userId) {
+//     document.getElementById(`user-btn-${previousButtonId}`).style.border = ''; // Remove border from previous button
+//     changeBorderOnClick(userId);
+//     previousButtonId = userId;
+//     let specificUserPostsUrl = `${userUrl}${userId}/posts`;
+//     renderUser('GET', specificUserPostsUrl)
+//     httpReq.onload = function () {
+//         userPosts = httpReq.response;
+//         if (httpReq.status >= 200 && httpReq.status < 300) {
+//             document.querySelector('.contentContainer').innerHTML = ''; // Clear previous posts
+//             for (let post of userPosts) {
+//                 document.querySelector('.contentContainer').innerHTML +=
+//                     `
+//                 <div class="userPosts">
+//                     <h5 id="userTitelPost">${post.title}</h5>
+//                     <hr />
+//                     <p id="uContent">
+//                     ${post.body}
+//                     </p>
+//                 </div><br><br>
+//             `;
+//             }
+//         } else {
+//             document.querySelector('.contentContainer').innerHTML = 'Error loading user data.';
+//         }
+//     };
+// }
+// // Function to apply border to clicked button
+// function changeBorderOnClick(id) {
+//     document.getElementById(`user-btn-${id}`).style.border = 'solid red 2px';
+// }
+// // Function to make HTTP request and handle response
+// function renderUser(methodName, url) {
+//     httpReq.open(methodName, url);
+//     httpReq.responseType = 'json';
+//     httpReq.send();
+// }
+// getAllUserAndPosts();
+
+
+
+
+/* ============================================================================================ */
+
+/* ANOTHER SOLVE: */
+
+//getAllUser();
+
+// Function to fetch all users and render them as buttons
+// function getAllUser() {
+//     renderUser('GET', userUrl)
+//     httpReq.onload = function () {
+//         userArray = httpReq.response;
+//         if (httpReq.status >= 200 && httpReq.status < 300) {
+//             for (let user of userArray) {
+//                 document.getElementById('sideContainer').innerHTML +=
+//                     `
+//                         <div onclick="userClicked(${user.id}, this)" class="userNameEmail"       id="user-btn">
+//                             <h3 id="username">${user.name}</h3>
+//                             <p id="uEmail">${user.email}</p>
+//                         </div><br><br>
+//                     `;
+//             }
+//         }
+//         else {
+//             document.getElementById('sideContainer').innerHTML = 'Error loading user data.';
+//         }
+//         document.querySelector('.contentContainer').innerHTML = `<h2 style="display: flex; justify-content: center; align-items: center; height: 100%;">Click on any user to see his posts</h2>`
+//     };
+// }
+
+// Function to display posts of a specific user
+// function displayPosts(userId) {
+
+//     let specificUserPostsUrl = `${postsUrl}?userId=${userId}`;
+//     renderUser('GET', specificUserPostsUrl)
+//     httpReq.onload = function () {
+//         userPosts = httpReq.response;
+//         if (httpReq.status >= 200 && httpReq.status < 300) {
+//             document.querySelector('.contentContainer').innerHTML = ''; // Clear previous posts
+//             for (let post of userPosts) {
+//                 document.querySelector('.contentContainer').innerHTML +=
+//                     `
+//                 <div class="userPosts">
+//                     <h5 id="userTitelPost">${post.title}</h5>
+//                     <hr />
+//                     <p id="uContent">
+//                     ${post.body}
+//                     </p>
+//                 </div><br><br>
+//             `;
+//             }
+//         } else {
+//             document.querySelector('.contentContainer').innerHTML = 'Error loading user data.';
+//         }
+//     };
+// }
+// Function to handle user click event:
+// function userClicked(userId, el) {
+//     displayPosts(userId)
+//     let selectedElements = document.getElementsByClassName('selected')
+//     for (element of selectedElements) {
+//         element.classList.remove('selected')
+//     }
+//     el.classList.add('selected')
+// }

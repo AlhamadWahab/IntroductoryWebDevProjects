@@ -1,0 +1,14 @@
+{
+  "name": "prayertimes",
+  "version": "1.0.0",
+  "description": "This API project takes a city name from the user and then provides all the prayer times for that city for one day.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
+}

@@ -1,0 +1,95 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /* background-image: linear-gradient(to top, rgb(244, 247, 105), rgb(214, 247, 124), rgb(121, 138, 89)); */
+    background-image: url(../img/pexels-mutefekkirane-42370143-18360300.jpg);
+    width: 100vw;
+    /* height: 100vh; */
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    height: 70px;
+    text-align: center;
+    padding-top: 30px;
+    /* background-color: rgba(0, 0, 0, 0.534); */
+    margin-top: 15px;
+    border-radius: 40px;
+}
+
+.title h1 {
+    width: 70%;
+    margin: 0 auto;
+    font-weight: bolder;
+    font-size: 50px;
+    color: darkkhaki;
+    box-shadow: 1px 1px 5px rgb(175, 159, 159);
+}
+
+#print {
+    width: 55%;
+    /* height: 230px; */
+    background-color: rgba(0, 0, 0, 0.534);
+    margin: 90px auto;
+    padding: 6px;
+    border-radius: 40px;
+    color: rgb(243, 231, 215);
+    box-shadow: 1px 1px 5px rgb(175, 159, 159);
+    text-align: center;
+}
+
+.userInputContainer,
+.cityDisplaying {
+    width: 50%;
+    margin: 70px auto;
+    background-color: rgba(0, 0, 0, 0.534);
+    padding: 11px 0;
+    border-radius: 40px;
+    color: antiquewhite;
+    box-shadow: 1px 1px 5px rgb(175, 159, 159);
+    text-align: center;
+}
+
+#city,
+#clicked {
+    border: none;
+    border-radius: 40px;
+    height: 30px;
+    width: 45%;
+    margin-top: 5px;
+    background-color: rgba(197, 195, 158, 0.603);
+}
+
+#city {
+    padding-left: 15px;
+    box-shadow: 1px 1px 5px rgb(175, 159, 159);
+    width: 80%;
+    font-size: large;
+    text-align: center;
+}
+
+
+#beschreibung {
+    padding: 7px;
+    border-radius: 40px;
+    background-color: rgba(197, 195, 158, 0.603);
+    color: black;
+}
+
+#clicked {
+    /* margin-left: 10px; */
+    box-shadow: 1px 1px 5px rgb(175, 159, 159);
+}
+
+h1,
+span {
+    color: rgba(128, 255, 0, 0.733);
+}

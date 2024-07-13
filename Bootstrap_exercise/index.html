@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><span class="text-warning">Bilder</span>Library</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto pe-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#portfolio">Building</a></li>
+                <li><a class="dropdown-item" href="#portfolio">Bootcamps</a></li>
+                <li><a class="dropdown-item" href="#portfolio">Lib</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container main-container">
+      <div class="container">
+        <div class="row">
+          <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/img/kelly.jpg" class="d-block w-100" alt="photo is powerful">
+                <div class="carousel-caption">
+                  <h5>Your <span class="text-warning">idea </span>is our treasure</h5>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In sunt doloremque vel.</p>
+                  <p><a href="#" class="btn btn-warning mt3">Learn More.</a></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/claudio.jpg" class="d-block w-100" alt="photo is powerful">
+                <div class="carousel-caption">
+                  <h5>You need just <span class="text-warning">trust</span> us</h5>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In sunt doloremque vel.</p>
+                  <p><a href="#" class="btn btn-warning mt3">Learn More.</a></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/eric.jpg" class="d-block w-100" alt="photo is powerful">
+                <div class="carousel-caption">
+                  <h5><span class="text-warning">togother</span> we can do it</h5>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In sunt doloremque vel.</p>
+                  <p><a href="#" class="btn btn-warning mt3">Learn More.</a></p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <br>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- cards section -->
+      <div class="container-fluid px-md-4 px-lg-5 py-3 py-md-4 py-lg-5 bg-light">
+        <div class="row flex-md-row justify-content-md-center">
+          <div class="col-12 col-md-4 py-2">
+            <a href="#" class="text-decoration-none ">
+            <div class="card shadow border border-0 h-100">
+                  <img src="assets/img/mah.jpg" alt="AI Academy" width="494" height="386" class="img-fluid atto_image_button_middle">
+                  <div class="card-body first-sec bg-body-secondary">
+                      <h3><strong>Unlock the Potential of Artificial Intelligence</strong></h3>
+                      <p>Are you ready to delve into the fascinating world of Artificial Intelligence? Our AI Academy offers a comprehensive learning experience designed to equip you with the skills and knowledge needed to thrive in this rapidly evolving field. From machine learning algorithms to neural networks, embark on a transformative journey and explore the limitless possibilities of AI.&nbsp;</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-4 py-2">
+              <a href="#" class="text-decoration-none ">
+              <div class="card shadow border border-0 h-100">
+                <img src="assets/img/Acadiems-Photos.jpg" alt="CS Academy" width="497" height="388" class="img-fluid atto_image_button_text-bottom">
+                  <div class="card-body first-sec bg-body-secondary">
+                      <h3><strong>Secure Your Future in Cyber Defense</strong></h3>
+                      <p>&nbsp;In today's digital landscape, cybersecurity has never been more critical. Join our Cybersecurity Academy to gain valuable insights and expertise in protecting digital assets from cyber threats. From ethical hacking to risk management, our immersive curriculum prepares you for a rewarding career in safeguarding online infrastructures and combating cybercrime.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-4 py-2" data-tag-id="28">   
+              <a href="#" class="text-decoration-none ">
+              <div class="card shadow border border-0 h-100" data-tag-id="29">
+                <img src="assets/img/Freelancing Academy@2x.png" alt="Freelancing" width="674" height="526" class="img-fluid atto_image_button_text-bottom" data-tag-id="30">
+                <div class="card-body bg-body-secondary" data-tag-id="31">
+                  <h3 class="text-warning " data-tag-id="32"><strong data-tag-id="33">Empowering Your Journey to Freelance Success (coming soon)</strong></h3>
+                  <p data-tag-id="34">Are you ready to embrace the freedom of freelance work? Our Freelancing Academy (coming soon) offers a comprehensive platform for individuals seeking to thrive in the gig economy. Explore the intricacies of freelancing, receive mentorship from industry experts, and unlock a world of opportunities in remote work. Prepare to embark on a journey towards professional independence and fulfillment.</p>
+                </div>
+              </div>
+            </a>
+            </div>
+      </div>
+    </div>
+      <!-- service section -->
+      <section id="services" class="service section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-header text-center pb5">
+                <h2>our Services</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ullam repellat nam facere tempore praesentium assumenda dolorum fugit voluptatibus rem.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="card service-card text-white text-center bg-dark ">
+                <div class="card-body">
+                  <i class="bi bi-subtract"></i>
+                  <h3 class="card-title">Best Quality</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellendus quaerat perspiciatis ducimus? Veniam omnis magnam sint assumenda doloribus architecto? Sapiente iusto enim facere totam fugiat ex labore dolore quia.</p>
+                  <button class="btn btn-warning text-dark">Read More</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="card service-card text-white text-center bg-dark pb-2">
+                <div class="card-body">
+                  <i class="bi bi-slack"></i>
+                  <h3 class="card-title">Substainability</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellendus quaerat perspiciatis ducimus? Veniam omnis magnam sint assumenda doloribus architecto? Sapiente iusto enim facere totam fugiat ex labore dolore quia.</p>
+                  <button class="btn btn-warning text-dark">Read More</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+              <div class="card service-card text-white text-center bg-dark pb-2">
+                <div class="card-body">
+                  <i class="bi bi-playstation"></i>
+                  <h3 class="card-title">Intergrity</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellendus quaerat perspiciatis ducimus? Veniam omnis magnam sint assumenda doloribus architecto? Sapiente iusto enim facere totam fugiat ex labore dolore quia.</p>
+                  <button class="btn btn-warning text-dark">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- portfolio section -->
+      <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-header text-center pb5">
+                <h2>our Projects</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ullam repellat nam facere tempore praesentium assumenda dolorum fugit voluptatibus rem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-center bg-white">
+              <div class="card-body bg-body-secondary  text-dark">
+                <div class="img-area mb-4">
+                  <img src="assets/img/surface.jpg" alt="" class="img-fluid">
+                </div>
+                <h3 class="card-title">Building</h3>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam culpa a cum maiores maxime iusto veritatis aspernatur fuga ab, ut qui quos sint aliquid repellat nostrum eos id rem placeat.</p>
+                <button class="btn bg-warning text-dark">Learn about</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-center bg-white ">
+              <div class="card-body bg-body-secondary  text-dark">
+                <div class="img-area mb-4">
+                  <img src="assets/img/windows.jpg" alt="" class="img-fluid">
+                </div>
+                <h3 class="card-title">Bootcamps</h3>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam culpa a cum maiores maxime iusto veritatis aspernatur fuga ab, ut qui quos sint aliquid repellat nostrum eos id rem placeat.</p>
+                <button class="btn bg-warning text-dark">Learn about</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-center bg-white ">
+              <div class="card-body bg-body-secondary text-dark">
+                <div class="img-area mb-4">
+                  <img src="assets/img/claudio.jpg" alt="" class="img-fluid">
+                </div>
+                <h3 class="card-title">Lib</h3>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam culpa a cum maiores maxime iusto veritatis aspernatur fuga ab, ut qui quos sint aliquid repellat nostrum eos id rem placeat.</p>
+                <button class="btn bg-warning text-dark">Learn about</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- team section -->
+      <section id="team" class="section-padding">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header text-center pb5">
+              <h2>our Teams</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ullam repellat nam facere tempore praesentium assumenda dolorum fugit voluptatibus rem.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12- col-md-6 col-lg-3">
+            <div class="card text-center">
+              <div class="card-body bg-body-secondary team">
+                <img src="assets/img/dmitrii.jpg" alt="" class="img-fluid rounded-circle">
+                <h3 class="card-title py-2">Nicolie</h3>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam       doloribus animi obcaecati incidunt. Aliquid, labore!.</p>
+                <p class="socials">
+                  <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                  <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                  <a href="https://de.linkedin.com/"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                  <a href="https://www.tiktok.com/de-DE/"><i class="bi bi-tiktok text-dark mx-1"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12- col-md-6 col-lg-3">
+            <div class="card text-center">
+              <div class="card-body bg-body-secondary team">
+                <img src="assets/img/cai.jpg" alt="" class="img-fluid rounded-circle">
+                <h3 class="card-title py-2">Cai</h3>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam       doloribus animi obcaecati incidunt. Aliquid, labore!.</p>
+                <p class="socials">
+                  <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                  <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                  <a href="https://de.linkedin.com/"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                  <a href="https://www.tiktok.com/de-DE/"><i class="bi bi-tiktok text-dark mx-1"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12- col-md-6 col-lg-3">
+            <div class="card text-center">
+              <div class="card-body bg-body-secondary team">
+                <img src="assets/img/good.jpg" alt="" class="img-fluid rounded-circle">
+                <h3 class="card-title py-2">Sascha</h3>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam       doloribus animi obcaecati incidunt. Aliquid, labore!.</p>
+                <p class="socials">
+                  <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                  <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                  <a href="https://de.linkedin.com/"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                  <a href="https://www.tiktok.com/de-DE/"><i class="bi bi-tiktok text-dark mx-1"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12- col-md-6 col-lg-3">
+            <div class="card text-center">
+              <div class="card-body bg-body-secondary team">
+                <img src="assets/img/nice.jpg" alt="" class="img-fluid rounded-circle">
+                <h3 class="card-title py-2">Brand</h3>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam       doloribus animi obcaecati incidunt. Aliquid, labore!.</p>
+                <p class="socials">
+                  <a href="https://twitter.com/"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                  <a href="https://www.instagram.com/"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                  <a href="https://de.linkedin.com/"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                  <a href="https://www.tiktok.com/de-DE/"><i class="bi bi-tiktok text-dark mx-1"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact section -->
+      <section id="contact" class="contact section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-header text-center pb5">
+                <h2>Contact us</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ullam repellat nam facere tempore praesentium assumenda dolorum fugit voluptatibus rem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row m-0">
+          <div class="col-md-12 p-0 pt-4 pb-4">
+            <form action="#" class="bg-light p-4 m-auto">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <input type="text" class="form-control" required placeholder="your full name">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <input type="email" class="form-control" required placeholder="your email">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <textarea rows="7" required class="form-control" placeholder="your query"></textarea>
+                  </div>
+                </div>
+                <button class="btn btn-warning btn-ms btn-block mt-3">
+                  send now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <div class="footer bg-dark p-3 text-center">
+        <div class="container">
+          <p class="text-white">Rights Reserved &copy;2024</p>
+        </div>
+        
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+<!-- 
+
+       
+       
+ -->
