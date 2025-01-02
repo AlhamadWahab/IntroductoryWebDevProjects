@@ -2,6 +2,8 @@
 
 This repository consists of basic web development projects, incl. fetching data using an API.
 
+![CodePen](https://img.shields.io/badge/CodePen-000000.svg?style=for-the-badge&logo=codepen&logoColor=white)
+
 ## Projects
 
 1. *API Projects*
